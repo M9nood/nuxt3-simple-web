@@ -1,8 +1,5 @@
 import { defineStore } from 'pinia'
-
-interface Option {
-    count : number
-}
+import { Option } from './types/option'
 
 export const useOptionStore = defineStore('option', {
   state: (): Option => ({ count: 0 }),

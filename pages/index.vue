@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-const counter = useCounter()
+const counter = useCounterStore()
 const option = useOptionStore()
 useHead({
   title: 'Nuxt3 - Demo App'
