@@ -10,7 +10,14 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "nuxt": "3.0.0",
+    "typescript": "^4.9.4",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.6"

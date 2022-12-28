@@ -1,0 +1,39 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential",
+        "plugin:@typescript-eslint/recommended",
+        "@nuxtjs/eslint-config-typescript"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "vue/no-v-html": 0,
+		"max-lines": 0,
+		"no-unused-vars": 2,
+		"vue/experimental-script-setup-vars": 0,
+		"no-console": "off",
+		"semi": ["warn", "never"],
+		"comma-dangle": ["warn", "never"],
+		"import/no-unresolved": "off",
+		"import/prefer-default-export": "off",
+		"no-shadow": ["warn", { "allow": ["state"] }],
+		"no-param-reassign": ["warn", { "props": false }],
+		"linebreak-style": 0,
+		"no-mixed-spaces-and-tabs": ["warn", "smart-tabs"],
+        "space-before-function-paren":"off",
+        "no-unused-expressions":"off"
+    }
+}
