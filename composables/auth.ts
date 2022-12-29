@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia'
 import { User } from './types/user'
+// import { HttpResponse } from './types/http'
 
 export const useAuthStore = defineStore('auth', {
   state: () => {
     return {
-      user: { email: '', name: '' } as User
+      user: {} as User
     }
   },
   getters: {
@@ -14,10 +15,10 @@ export const useAuthStore = defineStore('auth', {
   },
   actions: {
     async login() {
-      const res = await $fetch('/api/auth', {
+      const { data } = await $fetch('/api/auth', {
         method: 'get'
       })
-      this.user = res
+      this.user = data
       console.log('login data', this.user)
     }
   }
