@@ -5,6 +5,7 @@ import { User } from './types/user'
 export const useAuthStore = defineStore('auth', {
   state: () => {
     return {
+      isAuthorize: false,
       user: {} as User
     }
   },
@@ -18,8 +19,15 @@ export const useAuthStore = defineStore('auth', {
       const { data } = await $fetch('/api/auth', {
         method: 'get'
       })
+      this.isAuthorize = true
       this.user = data
-      console.log('login data', this.user)
+    },
+    async refresh() {
+      const { data } = await $fetch('/api/auth', {
+        method: 'get'
+      })
+      this.isAuthorize = true
+      this.user = data
     }
   }
 })

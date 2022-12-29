@@ -3,5 +3,11 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt'
   ],
-  nitro: {}
+  vite: {
+    server: {
+      watch: {
+        usePolling: true
+      }
+    }
+  }
 })

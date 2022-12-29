@@ -1,14 +1,19 @@
 <template>
   <div>
     <p>Can't Access</p>
-    <button @click="auth.login">
+    <button @click="login">
       Login
     </button>
     <hr>
-    <pre>{{ auth.userData }}</pre>
   </div>
 </template>
 
 <script setup>
 const auth = useAuthStore()
+const router = useRouter()
+
+async function login() {
+  await auth.login()
+  router.push({ path: '/' })
+}
 </script>

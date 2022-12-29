@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Indecsdcdx Page</h1>
+    <AtomsNavMenu />
+    <h1>Index Page</h1>
     <p>counter : {{ counter.count }}</p>
     <p>
       <button @click="counter.increment">
@@ -30,5 +31,4 @@ const option = useOptionStore()
 useHead({
   title: 'Nuxt3 - Demo App'
 })
-console.log('Hello world!', counter.count)
 </script>

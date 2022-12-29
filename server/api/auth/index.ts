@@ -1,6 +1,6 @@
 import { successResponse } from '@/server/utils/http'
 export default defineEventHandler((event) => {
-  console.log('New request auth: ' + event.node.req.url)
+  console.log(`New request auth: ${event.node.req.method} ${event.node.req.url}`)
   const data = {
     name: 'toei',
     email: 'toei@test.com',
